@@ -32,7 +32,7 @@ with st.sidebar:
         type="password",
         placeholder="Paste your OpenAI API key here (sk-...)",
         help="You can get your API key from https://platform.openai.com/account/api-keys.",
-        value=st.session_state.get("OPENAI_API_KEY", "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"),
+        value=st.session_state.get("OPENAI_API_KEY", ""),
     )
     if user_secret:
         set_openai_api_key(user_secret)
