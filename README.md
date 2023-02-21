@@ -2,7 +2,7 @@
 FileGPT 🤖
 </h1>
 
-Read the article to know how it works: <a href="">Medium Article</a>
+Read the article to know how it works: <a href="https://medium.com/@dan.avila7/file-gpt-conversaci%C3%B3n-por-chat-con-un-archivo-698d17570358">Medium Article</a>
 
 With File GPT you will be able to extract all the information from a file.
 You will obtain the transcription, the embedding of each segment and also ask questions to the file through a chat.
