@@ -8,4 +8,5 @@ langchain
 pydantic
 typing
 faiss-cpu
+streamlit
 streamlit_chat
