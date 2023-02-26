@@ -122,7 +122,6 @@ def embed_docs(docs: List[Document]) -> VectorStore:
 def search_docs(index: VectorStore, query: str) -> List[Document]:
     """Searches a FAISS index for similar chunks to the query
     and returns a list of Documents."""
-
     # Search for similar chunks
     docs = index.similarity_search(query, k=5)
     return docs
