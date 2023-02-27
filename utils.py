@@ -68,6 +68,12 @@ def parse_csv(uploaded_file):
     # dataframe = pd.read_csv(uploaded_file)
     return string_data
 
+@st.experimental_memo()
+def parse_any(uploaded_file):
+    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+    string_data = stringio.read()
+    return string_data
+
 
 @st.cache(allow_output_mutation=True)
 def text_to_docs(text: str) -> List[Document]:

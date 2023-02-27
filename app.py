@@ -10,6 +10,7 @@ from utils import (
     embed_docs,
     text_to_docs,
     get_answer,
+    parse_any,
     get_sources,
     wrap_text_in_html,
 )
@@ -39,7 +40,7 @@ with st.sidebar:
 
     uploaded_file = st.file_uploader(
         "Upload a pdf, docx, or txt file",
-        type=["pdf", "docx", "txt", "csv"],
+        type=["pdf", "docx", "txt", "csv", "js", "py", "json", "html", "css", "md"],
         help="Scanned documents are not supported yet!",
         on_change=clear_submit,
     )
@@ -54,8 +55,9 @@ with st.sidebar:
         elif uploaded_file.name.endswith(".txt"):
             doc = parse_txt(uploaded_file)
         else:
-            st.error("File type not supported")
-            doc = None
+            doc = parse_any(uploaded_file)
+            #st.error("File type not supported")
+            #doc = None
         text = text_to_docs(doc)
         try:
             with st.spinner("Indexing document... This may take a while⏳"):
